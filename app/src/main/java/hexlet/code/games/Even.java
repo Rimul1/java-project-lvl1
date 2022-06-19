@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Cli;
+import hexlet.code.Generator;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,15 +9,15 @@ import java.util.Scanner;
 public class Even {
     public static void parity() {
         Cli cli = new Cli();
-        cli.greet();
+        Scanner scanner = new Scanner(System.in);
+        Generator generator = new Generator();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
         for (int i = 0; i < 3; i++) {
-            Random random = new Random();
-            int numRandom = random.nextInt(100);
+
+            int numRandom = generator.getNum(100);
             System.out.println("Question: " + numRandom);
 
-            Scanner scanner = new Scanner(System.in);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
 
