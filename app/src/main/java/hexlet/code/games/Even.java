@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Generator;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
@@ -11,10 +10,11 @@ public class Even {
         Cli cli = new Cli();
         Scanner scanner = new Scanner(System.in);
         Generator generator = new Generator();
+        String win = null;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
         for (int i = 0; i < 3; i++) {
-
+            win = "lost";
             int numRandom = generator.getNum(100);
             System.out.println("Question: " + numRandom);
 
@@ -28,12 +28,13 @@ public class Even {
 
             if (exam.equals(userAnswer)) {
                 System.out.println("Correct!");
+                win = "win";
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + cli.getName());
                 break;
             }
         }
-        System.out.println("Congratulations, " + cli.getName());
+        if (win.equals("win")) System.out.println("Congratulations, " + cli.getName());
     }
 }

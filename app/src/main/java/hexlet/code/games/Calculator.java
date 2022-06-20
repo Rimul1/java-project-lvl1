@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Generator;
-
-import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
@@ -11,8 +9,10 @@ public class Calculator {
         Cli cli = new Cli();
         Scanner scanner = new Scanner(System.in);
         Generator generator = new Generator();
+        String win = null;
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
+            win = "lost";
             System.out.print("Question: ");
 
             int firstNum = generator.getNum(10);
@@ -25,11 +25,17 @@ public class Calculator {
 
             if (userNum == getSwitch(firstNum, aChar, secondNum)) {
                 System.out.println("Correct");
+                win = "win";
             } else {
                 System.out.println(userNum + " is wrong answer ;(. Correct answer was " + getSwitch(firstNum, aChar, secondNum) + ".\n" +
-                        "Let's try again, " + cli.getName());
+                        "Let's try again, " + cli.getName() + "!");
                 break;
             }
+        }
+
+
+        if (win.equals("win")) {
+            System.out.println("Congratulations, " + cli.getName());
         }
         System.out.println("Congratulations, " + cli.getName());
     }

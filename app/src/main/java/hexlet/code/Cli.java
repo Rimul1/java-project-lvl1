@@ -3,16 +3,17 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    private String name;
-    public Cli() {
+    private static String name;
 
+    public Cli() {
     }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Cli.name = name;
     }
 
     public void greet() {

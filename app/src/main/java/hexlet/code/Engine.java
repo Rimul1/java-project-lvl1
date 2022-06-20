@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
+import hexlet.code.games.Greatest_Common_Divisor;
 
 import java.util.Scanner;
 
@@ -12,6 +13,7 @@ public class Engine {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit""");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
@@ -30,6 +32,10 @@ public class Engine {
             case 3:
                 cli.greet();
                 Calculator.operations();
+                break;
+            case 4:
+                cli.greet();
+                Greatest_Common_Divisor.gcd();
                 break;
         }
     }
