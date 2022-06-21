@@ -1,7 +1,7 @@
-run-dist:
+run:
 	./build/install/app/bin/app
 
-run:
+run-dist:
 	gradle installDist
 
 check:
