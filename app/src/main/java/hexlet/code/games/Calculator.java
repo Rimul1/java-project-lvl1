@@ -37,7 +37,6 @@ public class Calculator {
         if (win.equals("win")) {
             System.out.println("Congratulations, " + cli.getName());
         }
-        System.out.println("Congratulations, " + cli.getName());
     }
 
     public static int getSwitch(int firstNum, char aChar, int secondNum) {
