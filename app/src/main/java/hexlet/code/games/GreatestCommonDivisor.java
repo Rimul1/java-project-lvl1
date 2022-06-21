@@ -5,7 +5,7 @@ import hexlet.code.Generator;
 
 import java.util.Scanner;
 
-public class Greatest_Common_Divisor {
+public class GreatestCommonDivisor {
     public static void gcd() {
         Generator generator = new Generator();
         Cli cli = new Cli();
@@ -40,8 +40,8 @@ public class Greatest_Common_Divisor {
                 System.out.println("Correct!");
                 win = "win";
             } else {
-                System.out.println(userNum + " is wrong answer ;(. Correct answer was " + fNum + ".\n" +
-                        "Let's try again, " + cli.getName() + "!");
+                System.out.println(userNum + " is wrong answer ;(. Correct answer was " + fNum + ".\n"
+                        + "Let's try again, " + cli.getName() + "!");
                 break;
             }
         }

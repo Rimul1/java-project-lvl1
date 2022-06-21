@@ -8,12 +8,12 @@ public class Cli {
     public Cli() {
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        Cli.name = name;
+    public final void setName(String name) {
+       Cli.name = name;
     }
 
     public void greet() {

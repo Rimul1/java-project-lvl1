@@ -27,8 +27,9 @@ public class Calculator {
                 System.out.println("Correct");
                 win = "win";
             } else {
-                System.out.println(userNum + " is wrong answer ;(. Correct answer was " + getSwitch(firstNum, aChar, secondNum) + ".\n" +
-                        "Let's try again, " + cli.getName() + "!");
+                System.out.println(userNum + " is wrong answer ;(. Correct answer was "
+                        + getSwitch(firstNum, aChar, secondNum) + ".\n"
+                        + "Let's try again, " + cli.getName() + "!");
                 break;
             }
         }

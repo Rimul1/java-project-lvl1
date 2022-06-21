@@ -34,10 +34,12 @@ public class PrimeNumbers {
                 }
             }
 
-
             if (check) {
                 exam = "yes";
-            } else exam = "no";
+            } else {
+                exam = "no";
+            }
+
 
             if (exam.equals(userAnswer)) {
                 System.out.println("Correct!");
@@ -48,6 +50,8 @@ public class PrimeNumbers {
                 break;
             }
         }
-        if (win.equals("win")) System.out.println("Congratulations, " + cli.getName());
+        if (win.equals("win")) {
+            System.out.println("Congratulations, " + cli.getName());
+        }
     }
 }

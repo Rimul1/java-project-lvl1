@@ -24,7 +24,9 @@ public class Even {
             String exam;
             if (numRandom % 2 == 0) {
                 exam = "yes";
-            } else exam = "no";
+            } else {
+                exam = "no";
+            }
 
             if (exam.equals(userAnswer)) {
                 System.out.println("Correct!");
@@ -35,6 +37,8 @@ public class Even {
                 break;
             }
         }
-        if (win.equals("win")) System.out.println("Congratulations, " + cli.getName());
+        if (win.equals("win")) {
+            System.out.println("Congratulations, " + cli.getName());
+        }
     }
 }

@@ -35,7 +35,7 @@ public class Engine {
                 break;
             case 4:
                 cli.greet();
-                Greatest_Common_Divisor.gcd();
+                GreatestCommonDivisor.gcd();
                 break;
             case 5:
                 cli.greet();

@@ -28,7 +28,7 @@ public class Progression {
             int searchVariableIndex = 1 + generator.getNum(index - 1);
             int searchVariable = masNum[searchVariableIndex - 1];
 
-            int[] newMasFirstPart = Arrays.copyOfRange(masNum,0,searchVariableIndex - 1);
+            int[] newMasFirstPart = Arrays.copyOfRange(masNum, 0, searchVariableIndex - 1);
             int[] masSecondPart = Arrays.copyOfRange(masNum, searchVariableIndex, masNum.length);
 
             System.out.print("Question: ");
@@ -41,8 +41,8 @@ public class Progression {
                 System.out.println("Correct!");
                 win = "win";
             } else {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + searchVariable + ".\n" +
-                        "Let's try again, " + cli.getName() + "!");
+                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + searchVariable + ".\n"
+                        + "Let's try again, " + cli.getName() + "!");
                 break;
             }
         }
