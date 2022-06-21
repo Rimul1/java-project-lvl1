@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calculator;
-import hexlet.code.games.Even;
-import hexlet.code.games.Greatest_Common_Divisor;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,6 +13,7 @@ public class Engine {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit""");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
@@ -42,6 +40,11 @@ public class Engine {
             case 5:
                 cli.greet();
                 Progression.arithmetic();
+                break;
+            case 6:
+                cli.greet();
+                PrimeNumbers.prime();
+                break;
         }
     }
 }
