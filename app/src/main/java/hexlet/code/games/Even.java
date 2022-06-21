@@ -13,9 +13,12 @@ public class Even {
         String win = null;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
-        for (int i = 0; i < 3; i++) {
+        final int gameItem = 3;
+        for (int i = 0; i < gameItem; i++) {
             win = "lost";
-            int numRandom = generator.getNum(100);
+
+            final int range = 100;
+            int numRandom = generator.getNum(range);
             System.out.println("Question: " + numRandom);
 
             System.out.print("Your answer: ");

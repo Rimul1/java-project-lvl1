@@ -13,11 +13,15 @@ public class PrimeNumbers {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         String win = null;
         String exam;
-        for (int i = 0; i < 3; i++) {
+
+        final int gameItem = 3;
+        for (int i = 0; i < gameItem; i++) {
             win = "lost";
 
             System.out.print("Question: ");
-            int pr = generator.getNum(30);
+
+            final int range = 30;
+            int pr = generator.getNum(range);
             System.out.println(pr);
 
             System.out.print("Your answer: ");

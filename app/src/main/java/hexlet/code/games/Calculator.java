@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Generator;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -11,12 +12,14 @@ public class Calculator {
         Generator generator = new Generator();
         String win = null;
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < 3; i++) {
+        final int gameItem = 3;
+        for (int i = 0; i < gameItem; i++) {
             win = "lost";
             System.out.print("Question: ");
 
-            int firstNum = generator.getNum(10);
-            int secondNum = generator.getNum(10);
+            final int range = 10;
+            int firstNum = generator.getNum(range);
+            int secondNum = generator.getNum(range);
             char aChar = generator.getChar();
             System.out.println(firstNum + " " + aChar + " " + secondNum);
 
@@ -54,6 +57,9 @@ public class Calculator {
             case '*' -> {
                 result = firstNum * secondNum;
                 return result;
+            }
+            default -> {
+                break;
             }
         }
         return result;

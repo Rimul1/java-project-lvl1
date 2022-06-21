@@ -13,12 +13,18 @@ public class Progression {
         Scanner scanner = new Scanner(System.in);
         String win = null;
         System.out.println("What number is missing in the progression?");
-        for (int i = 0; i < 3; i++) {
+
+        final int gameItem = 3;
+        for (int i = 0; i < gameItem; i++) {
             win = "lost";
 
-            int lowLimit = generator.getNum(20);
-            int step = 1 + generator.getNum(5);
-            int index = 5 + generator.getNum(6);
+            final int rangeLowLimit = 20;
+            int lowLimit = generator.getNum(rangeLowLimit);
+            final int rangeStep = 5;
+            int step = 1 + generator.getNum(rangeStep);
+            final int rangeIndex = 6;
+            final int indent = 5;
+            int index = indent + generator.getNum(rangeIndex);
             int[] masNum = new int[index];
 
             for (int j = 0; j < masNum.length; j++) {

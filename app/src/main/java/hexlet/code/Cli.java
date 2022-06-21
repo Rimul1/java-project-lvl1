@@ -1,28 +1,20 @@
 package hexlet.code;
 
+
 import java.util.Scanner;
 
-public class Cli {
-    private static String name;
+public final class Cli {
+    private String name;
 
-    public Cli() {
-    }
-
-    public final String getName() {
+    public String getName() {
         return name;
     }
 
-    public final void setName(String name) {
-       Cli.name = name;
-    }
-
-    public void greet() {
+    public Cli() {
         System.out.println("Welcome to the Brain Games!");
-
-        System.out.print("May I have your name? ");
         Scanner scanner = new Scanner(System.in);
-        setName(scanner.next());
-        System.out.println("Hello, " + getName());
+        System.out.print("May I have your name? ");
+        this.name = scanner.next();
+        System.out.println("Hello, " + getName() + "!");
     }
-
 }

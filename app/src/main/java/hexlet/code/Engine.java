@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Progression;
+import hexlet.code.games.PrimeNumbers;
+import hexlet.code.games.Even;
+import hexlet.code.games.GreatestCommonDivisor;
+import hexlet.code.games.Calculator;
 
 import java.util.Scanner;
 
@@ -19,31 +23,35 @@ public class Engine {
         System.out.print("Your choice: ");
         int number = scanner.nextInt();
         System.out.println();
-        Cli cli = new Cli();
+        final int one = 1;
+        final int two = 2;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
+        final int zero = 0;
         switch (number) {
-            case 0:
+            case zero:
                 break;
-            case 1:
-                cli.greet();
-            case 2:
-                cli.greet();
+            case one:
+                Cli cli = new Cli();
+                break;
+            case two:
                 Even.parity();
                 break;
-            case 3:
-                cli.greet();
+            case three:
                 Calculator.operations();
                 break;
-            case 4:
-                cli.greet();
+            case four:
                 GreatestCommonDivisor.gcd();
                 break;
-            case 5:
-                cli.greet();
+            case five:
                 Progression.arithmetic();
                 break;
-            case 6:
-                cli.greet();
+            case six:
                 PrimeNumbers.prime();
+                break;
+            default:
                 break;
         }
     }

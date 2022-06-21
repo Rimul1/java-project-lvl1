@@ -12,11 +12,15 @@ public class GreatestCommonDivisor {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Find the greatest common divisor of given numbers.");
         String win = null;
-        for (int i = 0; i < 3; i++) {
+
+        final int gameItem = 3;
+        for (int i = 0; i < gameItem; i++) {
             System.out.print("Question: ");
             win = "lost";
-            int fNum = generator.getNum(10);
-            int sNum = generator.getNum(10);
+
+            final int range = 10;
+            int fNum = generator.getNum(range);
+            int sNum = generator.getNum(range);
             System.out.println(fNum + " " + sNum);
 
             System.out.print("Your answer: ");

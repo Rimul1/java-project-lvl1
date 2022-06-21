@@ -2,8 +2,9 @@ package hexlet.code;
 
 import java.util.Random;
 
-public class Generator {
+public final class Generator {
     private final Random random;
+
     public Generator() {
         this.random = new Random();
     }
