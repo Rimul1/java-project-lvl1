@@ -36,7 +36,7 @@ public class Even {
                 win = "win";
             } else {
                 System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + exam + ".");
-                System.out.println("Let's try again, " + cli.getName());
+                System.out.println("Let's try again, " + cli.getName() + "!");
                 break;
             }
         }
