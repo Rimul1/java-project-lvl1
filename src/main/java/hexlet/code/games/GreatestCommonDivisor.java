@@ -50,7 +50,7 @@ public class GreatestCommonDivisor {
             }
         }
         if (win.equals("win")) {
-            System.out.println("Congratulations, " + cli.getName());
+            System.out.println("Congratulations, " + cli.getName() + "!");
         }
     }
 }
