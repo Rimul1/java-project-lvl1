@@ -37,8 +37,6 @@ public class GreatestCommonDivisor {
                 fNum = sNum;
                 sNum = gcd;
             }
-            System.out.println("Наибольший общий делитель равен: " + fNum);
-
 
             if (userNum == fNum) {
                 System.out.println("Correct!");

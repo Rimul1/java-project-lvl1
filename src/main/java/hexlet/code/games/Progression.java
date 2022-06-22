@@ -38,8 +38,16 @@ public class Progression {
             int[] masSecondPart = Arrays.copyOfRange(masNum, searchVariableIndex, masNum.length);
 
             System.out.print("Question: ");
-            System.out.println(Arrays.toString(newMasFirstPart) + " .. " + Arrays.toString(masSecondPart));
+            //System.out.println(Arrays.toString(newMasFirstPart) + " .. " + Arrays.toString(masSecondPart));
 
+            for (int j = 0; j < newMasFirstPart.length; j++) {
+                System.out.print(newMasFirstPart[j] + " ");
+            }
+            System.out.print(".. ");
+            for (int j = 0; j <masSecondPart.length; j++) {
+                System.out.print(masSecondPart[j] + " ");
+            }
+            System.out.println();
             System.out.print("Your answer: ");
             int userAnswer = scanner.nextInt();
 
