@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b33edf72-6bc6-4f12-9668-8d4317a56cd9" name="Changes" comment="fix bags linter p.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b33edf72-6bc6-4f12-9668-8d4317a56cd9" name="Changes" comment="fix bags linter p.4">
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/PrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/PrimeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655927744913</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix bags linter p.4">
+      <created>1655974685264</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655974685264</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +141,7 @@
     <MESSAGE value="fix bags" />
     <MESSAGE value="fix bags Progression class" />
     <MESSAGE value="fix bags linter p.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bags linter p.3" />
+    <MESSAGE value="fix bags linter p.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bags linter p.4" />
   </component>
 </project>
