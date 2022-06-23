@@ -10,8 +10,6 @@ import java.util.Scanner;
 
 public class Engine {
     public static void print() {
-        int number;
-        do {
             System.out.println("""
                     Please enter the game number and press Enter.
                     1 - Greet
@@ -23,7 +21,7 @@ public class Engine {
                     0 - Exit""");
             Scanner scanner = new Scanner(System.in);
             System.out.print("Your choice: ");
-            number = scanner.nextInt();
+            int number = scanner.nextInt();
             System.out.println();
             final int one = 1;
             final int two = 2;
@@ -56,6 +54,5 @@ public class Engine {
                 default:
                     break;
             }
-        } while (number != 0);
     }
 }
