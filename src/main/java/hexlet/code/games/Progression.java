@@ -44,7 +44,7 @@ public class Progression {
                 System.out.print(newMasFirstPart[j] + " ");
             }
             System.out.print(".. ");
-            for (int j = 0; j <masSecondPart.length; j++) {
+            for (int j = 0; j < masSecondPart.length; j++) {
                 System.out.print(masSecondPart[j] + " ");
             }
             System.out.println();

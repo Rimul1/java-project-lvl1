@@ -21,14 +21,14 @@ public class PrimeNumbers {
             System.out.print("Question: ");
 
             final int range = 30;
-            //int pr = generator.getNum(range);
-            int pr = 4;
+            int pr = generator.getNum(range);
             System.out.println(pr);
 
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
             boolean check = true;
-            if ((pr < 2) | (pr == 4)) {
+            final int checkFour = 4;
+            if ((pr < 2) | (pr == checkFour)) {
                 check = false;
             }
 
