@@ -4,7 +4,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public final class Cli {
-    private String name;
+    private final String name;
 
     public String getName() {
         return name;

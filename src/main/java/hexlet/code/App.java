@@ -7,9 +7,10 @@ import hexlet.code.games.GreatestCommonDivisor;
 import hexlet.code.games.Progression;
 
 import java.util.Scanner;
-
 public class App {
+
     public static void main(String[] args) {
+        Engine engine = new Engine();
         System.out.println("""
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -37,19 +38,19 @@ public class App {
                 Cli cli = new Cli();
                 break;
             case two:
-                Even.parity();
+                engine.run(Even.DESCRIPTION, Even::getAnswerQuestion);
                 break;
             case three:
-                Calculator.operations();
+                engine.run(Calculator.DESCRIPTION, Calculator::getAnswerQuestion);
                 break;
             case four:
-                GreatestCommonDivisor.gcd();
+                engine.run(GreatestCommonDivisor.DESCRIPTION, GreatestCommonDivisor::getQuestionAnswer);
                 break;
             case five:
-                Progression.arithmetic();
+                engine.run(Progression.DESCRIPTION, Progression::getQuestionAnswer);
                 break;
             case six:
-                PrimeNumbers.prime();
+                engine.run(PrimeNumbers.DESCRIPTION, PrimeNumbers::getQuestionAnswer);
                 break;
             default:
                 break;

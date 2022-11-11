@@ -1,67 +1,40 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-import hexlet.code.Generator;
-
+import hexlet.code.NumberRandomGenerator;
+import hexlet.code.QuestionAnswer;
 import java.util.Arrays;
-import java.util.Scanner;
-
 public class Progression {
-    public static void arithmetic() {
-        Generator generator = new Generator();
-        Cli cli = new Cli();
-        Scanner scanner = new Scanner(System.in);
-        String win = null;
-        System.out.println("What number is missing in the progression?");
+    private static final int rangeIndex = 6;
+    private static final int rangeLowLimit = 20;
+    private static final int rangeStep = 5;
+    private static final int indent = 5;
+    public static final String DESCRIPTION = "What number is missing in the progression?";
 
-        final int gameItem = 3;
-        for (int i = 0; i < gameItem; i++) {
-            win = "lost";
+    public static QuestionAnswer getQuestionAnswer() {
+        int lowLimit = NumberRandomGenerator.getNum(rangeLowLimit);
+        int step = 1 + NumberRandomGenerator.getNum(rangeStep);
 
-            final int rangeLowLimit = 20;
-            int lowLimit = generator.getNum(rangeLowLimit);
-            final int rangeStep = 5;
-            int step = 1 + generator.getNum(rangeStep);
-            final int rangeIndex = 6;
-            final int indent = 5;
-            int index = indent + generator.getNum(rangeIndex);
-            int[] masNum = new int[index];
+        int index = indent + NumberRandomGenerator.getNum(rangeIndex);
+        int[] masNum = new int[index];
 
-            for (int j = 0; j < masNum.length; j++) {
-                masNum[j] = lowLimit + step;
-                lowLimit = lowLimit + step;
-            }
-            int searchVariableIndex = 1 + generator.getNum(index - 1);
-            int searchVariable = masNum[searchVariableIndex - 1];
-
-            int[] newMasFirstPart = Arrays.copyOfRange(masNum, 0, searchVariableIndex - 1);
-            int[] masSecondPart = Arrays.copyOfRange(masNum, searchVariableIndex, masNum.length);
-
-            System.out.print("Question: ");
-            //System.out.println(Arrays.toString(newMasFirstPart) + " .. " + Arrays.toString(masSecondPart));
-
-            for (int j = 0; j < newMasFirstPart.length; j++) {
-                System.out.print(newMasFirstPart[j] + " ");
-            }
-            System.out.print(".. ");
-            for (int j = 0; j < masSecondPart.length; j++) {
-                System.out.print(masSecondPart[j] + " ");
-            }
-            System.out.println();
-            System.out.print("Your answer: ");
-            int userAnswer = scanner.nextInt();
-
-            if (userAnswer == searchVariable) {
-                System.out.println("Correct!");
-                win = "win";
-            } else {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + searchVariable + ".\n"
-                        + "Let's try again, " + cli.getName() + "!");
-                break;
-            }
+        for (int j = 0; j < masNum.length; j++) {
+            masNum[j] = lowLimit + step;
+            lowLimit = lowLimit + step;
         }
-        if (win.equals("win")) {
-            System.out.println("Congratulations, " + cli.getName() + "!");
+        int searchVariableIndex = 1 + NumberRandomGenerator.getNum(index - 1);
+        int searchVariable = masNum[searchVariableIndex - 1];
+
+        int[] newMasFirstPart = Arrays.copyOfRange(masNum, 0, searchVariableIndex - 1);
+        int[] masSecondPart = Arrays.copyOfRange(masNum, searchVariableIndex, masNum.length);
+        StringBuilder stNewMasFirstPart = new StringBuilder();
+        for (int item : newMasFirstPart) {
+            stNewMasFirstPart.append(item).append(" ");
         }
+
+        StringBuilder stMasSecondPart = new StringBuilder();
+        for (int item : masSecondPart) {
+            stMasSecondPart.append(item).append(" ");
+        }
+        return new QuestionAnswer(stNewMasFirstPart + ".. " + stMasSecondPart, searchVariable + "");
     }
 }

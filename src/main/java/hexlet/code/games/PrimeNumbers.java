@@ -1,62 +1,34 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-import hexlet.code.Generator;
 
-import java.util.Scanner;
+import hexlet.code.NumberRandomGenerator;
+import hexlet.code.QuestionAnswer;
 
 public class PrimeNumbers {
-    public static void prime() {
-        Cli cli = new Cli();
-        Scanner scanner = new Scanner(System.in);
-        Generator generator = new Generator();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        String win = null;
-        String exam;
+    public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static final int range = 30;
+    public static final int checkFour = 4;
+    public static QuestionAnswer getQuestionAnswer(){
+        boolean check = true;
+        final int pr = NumberRandomGenerator.getNum(range);
 
-        final int gameItem = 3;
-        for (int i = 0; i < gameItem; i++) {
-            win = "lost";
+        if ((pr < 2) | (pr == checkFour)) {
+            check = false;
+        }
 
-            System.out.print("Question: ");
-
-            final int range = 30;
-            int pr = generator.getNum(range);
-            System.out.println(pr);
-
-            System.out.print("Your answer: ");
-            String userAnswer = scanner.next();
-            boolean check = true;
-            final int checkFour = 4;
-            if ((pr < 2) | (pr == checkFour)) {
+        for (int j = 2; j < pr / 2; j++) {
+            if (pr % j == 0) {
                 check = false;
-            }
-
-            for (int j = 2; j < pr / 2; j++) {
-                if (pr % j == 0) {
-                    check = false;
-                    break;
-                }
-            }
-
-            if (check) {
-                exam = "yes";
-            } else {
-                exam = "no";
-            }
-
-
-            if (exam.equals(userAnswer)) {
-                System.out.println("Correct!");
-                win = "win";
-            } else {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + exam + ".");
-                System.out.println("Let's try again, " + cli.getName() + "!");
                 break;
             }
         }
-        if (win.equals("win")) {
-            System.out.println("Congratulations, " + cli.getName() + "!");
+        String exam;
+        if (check) {
+            exam = "yes";
+        } else {
+            exam = "no";
         }
+
+        return new QuestionAnswer(pr + "",exam);
     }
 }
