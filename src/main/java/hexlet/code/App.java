@@ -7,6 +7,7 @@ import hexlet.code.games.GreatestCommonDivisor;
 import hexlet.code.games.Progression;
 
 import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {

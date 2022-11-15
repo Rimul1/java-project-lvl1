@@ -1,4 +1,5 @@
 package hexlet.code.games;
+
 import hexlet.code.NumberRandomGenerator;
 import hexlet.code.QuestionAnswer;
 
