@@ -5,7 +5,7 @@ import hexlet.code.NumberRandomGenerator;
 
 public class Even {
     private static final int RANGE = 100;
-    public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'";
+    public static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static QuestionAnswer getAnswerQuestion() {
         int num = NumberRandomGenerator.getNum(RANGE);
