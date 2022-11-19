@@ -26,7 +26,7 @@ public class Engine {
             } else {
                 System.out.println(userAnswer + " is wrong answer ;(. Correct answer was "
                         + questionAnswer.answer() + ".\n"
-                        + "Let's try again, " + cli.getName() + "!");
+                        + "Let's try again," + cli.getName() + "!");
                 break;
             }
         }
