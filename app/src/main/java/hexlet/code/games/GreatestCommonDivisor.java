@@ -1,20 +1,26 @@
 package hexlet.code.games;
 
-import hexlet.code.NumberRandomGenerator;
-import hexlet.code.QuestionAnswer;
+import hexlet.code.Engine;
+import hexlet.code.Utils;
+import hexlet.code.RoundData;
 
 public class GreatestCommonDivisor {
     private static final int RANGE = 10;
     public static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
-
-    public static QuestionAnswer getQuestionAnswer() {
-        int fNum = NumberRandomGenerator.getNum(RANGE);
-        int sNum = NumberRandomGenerator.getNum(RANGE);
-
-        return new QuestionAnswer(fNum + " " + sNum, getAnswer(fNum, sNum) + "");
+    private final Engine engine;
+    public GreatestCommonDivisor() {
+        this.engine = new Engine();
     }
 
-    static int getAnswer(int fNum, int sNum) {
+    public RoundData getQuestionAnswer() {
+        int fNum = Utils.getNum(RANGE);
+        int sNum = Utils.getNum(RANGE);
+        String question = fNum + " " + sNum;
+        String answer = calculateGCD(fNum, sNum) + "";
+        return new RoundData(question, answer);
+    }
+
+    static int calculateGCD(int fNum, int sNum) {
         int gcd;
         if (fNum < sNum) {
             int tmp = fNum;
@@ -27,5 +33,8 @@ public class GreatestCommonDivisor {
             sNum = gcd;
         }
         return fNum;
+    }
+    public void runGame() {
+        engine.run(DESCRIPTION, this::getQuestionAnswer);
     }
 }

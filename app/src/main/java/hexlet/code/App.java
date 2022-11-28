@@ -1,17 +1,19 @@
 package hexlet.code;
 
-import hexlet.code.games.PrimeNumbers;
-import hexlet.code.games.Calculator;
-import hexlet.code.games.Even;
-import hexlet.code.games.GreatestCommonDivisor;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
 public class App {
+    private static final int ONE = 1;
+    private static final int two = 2;
+    private static final int three = 3;
+    private static final int four = 4;
+    private static final int five = 5;
+    private static final int six = 6;
+    private static final int zero = 0;
 
     public static void main(String[] args) {
-        Engine engine = new Engine();
         System.out.println("""
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -25,33 +27,27 @@ public class App {
         System.out.print("Your choice: ");
         int number = scanner.nextInt();
         System.out.println();
-        final int one = 1;
-        final int two = 2;
-        final int three = 3;
-        final int four = 4;
-        final int five = 5;
-        final int six = 6;
-        final int zero = 0;
         switch (number) {
             case zero:
                 break;
-            case one:
-                new Cli();
+            case ONE:
+                new Cli().great();
                 break;
             case two:
-                engine.run(Even.DESCRIPTION, Even::getAnswerQuestion);
+                new Even().runGame();
                 break;
             case three:
-                engine.run(Calculator.DESCRIPTION, Calculator::getAnswerQuestion);
+                new Calculator().runGame();
                 break;
             case four:
-                engine.run(GreatestCommonDivisor.DESCRIPTION, GreatestCommonDivisor::getQuestionAnswer);
+                new GreatestCommonDivisor().runGame();
                 break;
             case five:
-                engine.run(Progression.DESCRIPTION, Progression::getQuestionAnswer);
+                new Progression().runGame();
                 break;
             case six:
-                engine.run(PrimeNumbers.DESCRIPTION, PrimeNumbers::getQuestionAnswer);
+                new PrimeNumbers().runGame();
+                //engine.run(PrimeNumbers.DESCRIPTION, PrimeNumbers::getQuestionAnswer);
                 break;
             default:
                 break;

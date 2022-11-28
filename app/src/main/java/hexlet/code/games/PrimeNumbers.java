@@ -1,17 +1,27 @@
 package hexlet.code.games;
 
 
-import hexlet.code.NumberRandomGenerator;
-import hexlet.code.QuestionAnswer;
+import hexlet.code.Engine;
+import hexlet.code.Utils;
+import hexlet.code.RoundData;
 
 public class PrimeNumbers {
     public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final int RANGE = 30;
     public static final int CHECK_FOUR = 4;
+    private final Engine ENGINE;
 
-    public static QuestionAnswer getQuestionAnswer() {
+    public PrimeNumbers() {
+        this.ENGINE = new Engine();
+    }
+
+    public void runGame() {
+        ENGINE.run(DESCRIPTION,PrimeNumbers::getQuestionAnswer);
+    }
+
+    public static RoundData getQuestionAnswer() {
         boolean check = true;
-        final int pr = NumberRandomGenerator.getNum(RANGE);
+        final int pr = Utils.getNum(RANGE);
 
         if ((pr < 2) | (pr == CHECK_FOUR)) {
             check = false;
@@ -30,6 +40,9 @@ public class PrimeNumbers {
             exam = "no";
         }
 
-        return new QuestionAnswer(pr + "", exam);
+
+        String question = pr + "";
+        String answer = exam;
+        return new RoundData(question, answer);
     }
 }
