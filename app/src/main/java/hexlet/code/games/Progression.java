@@ -3,11 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 import hexlet.code.RoundData;
+
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Progression {
-    private final Engine ENGINE;
+    private final Engine engine;
     private static final int RANGE_INDEX = 6;
     private static final int RANGE_LOW_LIMIT = 20;
     private static final int RANGE_STEP = 5;
@@ -15,16 +16,18 @@ public class Progression {
     public static final String DESCRIPTION = "What number is missing in the progression?";
 
     public Progression() {
-        this.ENGINE = new Engine();
+        this.engine = new Engine();
     }
 
-    public void runGame() {
-        ENGINE.run(DESCRIPTION, Progression::getQuestionAnswer);
+    public final void runGame() {
+        engine.run(DESCRIPTION, Progression::getQuestionAnswer);
     }
 
     private static RoundData getQuestionAnswer() {
-        int[] masNum = greatMas(Utils.getNum(RANGE_LOW_LIMIT), 1 + Utils.getNum(RANGE_STEP), INDENT + Utils.getNum(RANGE_INDEX));
-        int searchVariableIndex = 1 + Utils.getNum(masNum.length - 1);//(index - 1);
+        int[] masNum = greatMas(Utils.getNum(RANGE_LOW_LIMIT),
+                1 + Utils.getNum(RANGE_STEP),
+                INDENT + Utils.getNum(RANGE_INDEX));
+        int searchVariableIndex = 1 + Utils.getNum(masNum.length - 1);
         String question = IntStream.range(0, masNum.length)
                 .mapToObj(i -> i == searchVariableIndex ? ".." : masNum[i])
                 .map(Object::toString)

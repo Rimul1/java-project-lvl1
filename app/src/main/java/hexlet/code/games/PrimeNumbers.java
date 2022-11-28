@@ -9,14 +9,14 @@ public class PrimeNumbers {
     public static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final int RANGE = 30;
     public static final int CHECK_FOUR = 4;
-    private final Engine ENGINE;
+    private final Engine engine;
 
     public PrimeNumbers() {
-        this.ENGINE = new Engine();
+        this.engine = new Engine();
     }
 
-    public void runGame() {
-        ENGINE.run(DESCRIPTION,PrimeNumbers::getQuestionAnswer);
+    public final void runGame() {
+        engine.run(DESCRIPTION, PrimeNumbers::getQuestionAnswer);
     }
 
     public static RoundData getQuestionAnswer() {

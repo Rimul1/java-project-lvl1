@@ -8,11 +8,12 @@ public class GreatestCommonDivisor {
     private static final int RANGE = 10;
     public static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
     private final Engine engine;
+
     public GreatestCommonDivisor() {
         this.engine = new Engine();
     }
 
-    public RoundData getQuestionAnswer() {
+    public static RoundData getQuestionAnswer() {
         int fNum = Utils.getNum(RANGE);
         int sNum = Utils.getNum(RANGE);
         String question = fNum + " " + sNum;
@@ -34,7 +35,8 @@ public class GreatestCommonDivisor {
         }
         return fNum;
     }
-    public void runGame() {
-        engine.run(DESCRIPTION, this::getQuestionAnswer);
+
+    public final void runGame() {
+        engine.run(DESCRIPTION, GreatestCommonDivisor::getQuestionAnswer);
     }
 }

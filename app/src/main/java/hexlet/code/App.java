@@ -1,17 +1,20 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Even;
+import hexlet.code.games.PrimeNumbers;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.GreatestCommonDivisor;
 
 import java.util.Scanner;
 
 public class App {
     private static final int ONE = 1;
-    private static final int two = 2;
-    private static final int three = 3;
-    private static final int four = 4;
-    private static final int five = 5;
-    private static final int six = 6;
-    private static final int zero = 0;
+    private static final int TWO = 2;
+    private static final int THREE = 3;
+    private static final int FOUR = 4;
+    private static final int FIVE = 5;
+    private static final int SIX = 6;
 
     public static void main(String[] args) {
         System.out.println("""
@@ -28,29 +31,15 @@ public class App {
         int number = scanner.nextInt();
         System.out.println();
         switch (number) {
-            case zero:
-                break;
-            case ONE:
-                new Cli().great();
-                break;
-            case two:
-                new Even().runGame();
-                break;
-            case three:
-                new Calculator().runGame();
-                break;
-            case four:
-                new GreatestCommonDivisor().runGame();
-                break;
-            case five:
-                new Progression().runGame();
-                break;
-            case six:
-                new PrimeNumbers().runGame();
-                //engine.run(PrimeNumbers.DESCRIPTION, PrimeNumbers::getQuestionAnswer);
-                break;
-            default:
-                break;
+            case ONE -> Cli.great();
+            case TWO -> new Even().runGame();
+            case THREE -> new Calculator().runGame();
+            case FOUR -> new GreatestCommonDivisor().runGame();
+            case FIVE -> new Progression().runGame();
+            case SIX -> new PrimeNumbers().runGame();
+
+            default -> {
+            }
         }
     }
 }

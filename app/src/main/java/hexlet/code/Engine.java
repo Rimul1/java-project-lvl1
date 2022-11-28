@@ -12,7 +12,7 @@ public class Engine {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = scanner.next();
-        System.out.println("Hello, " + name  + "!");
+        System.out.println("Hello, " + name + "!");
 
         System.out.println(description);
         for (int i = 0; i < GAME_COUNT; i++) {

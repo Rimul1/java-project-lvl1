@@ -32,7 +32,8 @@ public class Calculator {
             default -> throw new IllegalArgumentException("Не сущетсвующий оператор");
         };
     }
-    public void runGame(){
+
+    public final void runGame() {
         engine.run(DESCRIPTION, Calculator::getAnswerQuestion);
     }
 

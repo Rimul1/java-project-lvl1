@@ -7,15 +7,14 @@ import hexlet.code.Utils;
 public class Even {
     private static final int RANGE = 100;
     private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-
-    private final Engine ENGINE;
+    private final Engine engine;
 
     public Even() {
-        this.ENGINE = new Engine();
+        this.engine = new Engine();
     }
 
-    public void runGame() {
-        ENGINE.run(DESCRIPTION, this::getAnswerQuestion);
+    public final void runGame() {
+        engine.run(DESCRIPTION, this::getAnswerQuestion);
     }
 
     private RoundData getAnswerQuestion() {
